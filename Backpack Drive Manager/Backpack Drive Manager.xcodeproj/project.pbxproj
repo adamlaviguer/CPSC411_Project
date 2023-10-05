@@ -1,0 +1,582 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CFE7B45E2ACF07F700507802 /* Backpack_Drive_ManagerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE7B45D2ACF07F700507802 /* Backpack_Drive_ManagerApp.swift */; };
+		CFE7B4602ACF07F700507802 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE7B45F2ACF07F700507802 /* ContentView.swift */; };
+		CFE7B4622ACF07F900507802 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFE7B4612ACF07F900507802 /* Assets.xcassets */; };
+		CFE7B4652ACF07F900507802 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFE7B4642ACF07F900507802 /* Preview Assets.xcassets */; };
+		CFE7B46F2ACF07F900507802 /* Backpack_Drive_ManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE7B46E2ACF07F900507802 /* Backpack_Drive_ManagerTests.swift */; };
+		CFE7B4792ACF07F900507802 /* Backpack_Drive_ManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE7B4782ACF07F900507802 /* Backpack_Drive_ManagerUITests.swift */; };
+		CFE7B47B2ACF07F900507802 /* Backpack_Drive_ManagerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE7B47A2ACF07F900507802 /* Backpack_Drive_ManagerUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CFE7B46B2ACF07F900507802 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CFE7B4522ACF07F700507802 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CFE7B4592ACF07F700507802;
+			remoteInfo = "Backpack Drive Manager";
+		};
+		CFE7B4752ACF07F900507802 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CFE7B4522ACF07F700507802 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CFE7B4592ACF07F700507802;
+			remoteInfo = "Backpack Drive Manager";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CFE7B45A2ACF07F700507802 /* Backpack Drive Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Backpack Drive Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFE7B45D2ACF07F700507802 /* Backpack_Drive_ManagerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backpack_Drive_ManagerApp.swift; sourceTree = "<group>"; };
+		CFE7B45F2ACF07F700507802 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CFE7B4612ACF07F900507802 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CFE7B4642ACF07F900507802 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CFE7B46A2ACF07F900507802 /* Backpack Drive ManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Backpack Drive ManagerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFE7B46E2ACF07F900507802 /* Backpack_Drive_ManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backpack_Drive_ManagerTests.swift; sourceTree = "<group>"; };
+		CFE7B4742ACF07F900507802 /* Backpack Drive ManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Backpack Drive ManagerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFE7B4782ACF07F900507802 /* Backpack_Drive_ManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backpack_Drive_ManagerUITests.swift; sourceTree = "<group>"; };
+		CFE7B47A2ACF07F900507802 /* Backpack_Drive_ManagerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backpack_Drive_ManagerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CFE7B4572ACF07F700507802 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFE7B4672ACF07F900507802 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFE7B4712ACF07F900507802 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CFE7B4512ACF07F700507802 = {
+			isa = PBXGroup;
+			children = (
+				CFE7B45C2ACF07F700507802 /* Backpack Drive Manager */,
+				CFE7B46D2ACF07F900507802 /* Backpack Drive ManagerTests */,
+				CFE7B4772ACF07F900507802 /* Backpack Drive ManagerUITests */,
+				CFE7B45B2ACF07F700507802 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CFE7B45B2ACF07F700507802 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CFE7B45A2ACF07F700507802 /* Backpack Drive Manager.app */,
+				CFE7B46A2ACF07F900507802 /* Backpack Drive ManagerTests.xctest */,
+				CFE7B4742ACF07F900507802 /* Backpack Drive ManagerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CFE7B45C2ACF07F700507802 /* Backpack Drive Manager */ = {
+			isa = PBXGroup;
+			children = (
+				CFE7B45D2ACF07F700507802 /* Backpack_Drive_ManagerApp.swift */,
+				CFE7B45F2ACF07F700507802 /* ContentView.swift */,
+				CFE7B4612ACF07F900507802 /* Assets.xcassets */,
+				CFE7B4632ACF07F900507802 /* Preview Content */,
+			);
+			path = "Backpack Drive Manager";
+			sourceTree = "<group>";
+		};
+		CFE7B4632ACF07F900507802 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CFE7B4642ACF07F900507802 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CFE7B46D2ACF07F900507802 /* Backpack Drive ManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				CFE7B46E2ACF07F900507802 /* Backpack_Drive_ManagerTests.swift */,
+			);
+			path = "Backpack Drive ManagerTests";
+			sourceTree = "<group>";
+		};
+		CFE7B4772ACF07F900507802 /* Backpack Drive ManagerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CFE7B4782ACF07F900507802 /* Backpack_Drive_ManagerUITests.swift */,
+				CFE7B47A2ACF07F900507802 /* Backpack_Drive_ManagerUITestsLaunchTests.swift */,
+			);
+			path = "Backpack Drive ManagerUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CFE7B4592ACF07F700507802 /* Backpack Drive Manager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFE7B47E2ACF07F900507802 /* Build configuration list for PBXNativeTarget "Backpack Drive Manager" */;
+			buildPhases = (
+				CFE7B4562ACF07F700507802 /* Sources */,
+				CFE7B4572ACF07F700507802 /* Frameworks */,
+				CFE7B4582ACF07F700507802 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Backpack Drive Manager";
+			productName = "Backpack Drive Manager";
+			productReference = CFE7B45A2ACF07F700507802 /* Backpack Drive Manager.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CFE7B4692ACF07F900507802 /* Backpack Drive ManagerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFE7B4812ACF07F900507802 /* Build configuration list for PBXNativeTarget "Backpack Drive ManagerTests" */;
+			buildPhases = (
+				CFE7B4662ACF07F900507802 /* Sources */,
+				CFE7B4672ACF07F900507802 /* Frameworks */,
+				CFE7B4682ACF07F900507802 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CFE7B46C2ACF07F900507802 /* PBXTargetDependency */,
+			);
+			name = "Backpack Drive ManagerTests";
+			productName = "Backpack Drive ManagerTests";
+			productReference = CFE7B46A2ACF07F900507802 /* Backpack Drive ManagerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CFE7B4732ACF07F900507802 /* Backpack Drive ManagerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFE7B4842ACF07F900507802 /* Build configuration list for PBXNativeTarget "Backpack Drive ManagerUITests" */;
+			buildPhases = (
+				CFE7B4702ACF07F900507802 /* Sources */,
+				CFE7B4712ACF07F900507802 /* Frameworks */,
+				CFE7B4722ACF07F900507802 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CFE7B4762ACF07F900507802 /* PBXTargetDependency */,
+			);
+			name = "Backpack Drive ManagerUITests";
+			productName = "Backpack Drive ManagerUITests";
+			productReference = CFE7B4742ACF07F900507802 /* Backpack Drive ManagerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CFE7B4522ACF07F700507802 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					CFE7B4592ACF07F700507802 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					CFE7B4692ACF07F900507802 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = CFE7B4592ACF07F700507802;
+					};
+					CFE7B4732ACF07F900507802 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = CFE7B4592ACF07F700507802;
+					};
+				};
+			};
+			buildConfigurationList = CFE7B4552ACF07F700507802 /* Build configuration list for PBXProject "Backpack Drive Manager" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CFE7B4512ACF07F700507802;
+			productRefGroup = CFE7B45B2ACF07F700507802 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CFE7B4592ACF07F700507802 /* Backpack Drive Manager */,
+				CFE7B4692ACF07F900507802 /* Backpack Drive ManagerTests */,
+				CFE7B4732ACF07F900507802 /* Backpack Drive ManagerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CFE7B4582ACF07F700507802 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFE7B4652ACF07F900507802 /* Preview Assets.xcassets in Resources */,
+				CFE7B4622ACF07F900507802 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFE7B4682ACF07F900507802 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFE7B4722ACF07F900507802 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CFE7B4562ACF07F700507802 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFE7B4602ACF07F700507802 /* ContentView.swift in Sources */,
+				CFE7B45E2ACF07F700507802 /* Backpack_Drive_ManagerApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFE7B4662ACF07F900507802 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFE7B46F2ACF07F900507802 /* Backpack_Drive_ManagerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFE7B4702ACF07F900507802 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFE7B4792ACF07F900507802 /* Backpack_Drive_ManagerUITests.swift in Sources */,
+				CFE7B47B2ACF07F900507802 /* Backpack_Drive_ManagerUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CFE7B46C2ACF07F900507802 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CFE7B4592ACF07F700507802 /* Backpack Drive Manager */;
+			targetProxy = CFE7B46B2ACF07F900507802 /* PBXContainerItemProxy */;
+		};
+		CFE7B4762ACF07F900507802 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CFE7B4592ACF07F700507802 /* Backpack Drive Manager */;
+			targetProxy = CFE7B4752ACF07F900507802 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CFE7B47C2ACF07F900507802 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CFE7B47D2ACF07F900507802 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CFE7B47F2ACF07F900507802 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Backpack Drive Manager/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "CPSC411.Backpack-Drive-Manager";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CFE7B4802ACF07F900507802 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Backpack Drive Manager/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "CPSC411.Backpack-Drive-Manager";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CFE7B4822ACF07F900507802 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "CPSC411.Backpack-Drive-ManagerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Backpack Drive Manager.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Backpack Drive Manager";
+			};
+			name = Debug;
+		};
+		CFE7B4832ACF07F900507802 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "CPSC411.Backpack-Drive-ManagerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Backpack Drive Manager.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Backpack Drive Manager";
+			};
+			name = Release;
+		};
+		CFE7B4852ACF07F900507802 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "CPSC411.Backpack-Drive-ManagerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Backpack Drive Manager";
+			};
+			name = Debug;
+		};
+		CFE7B4862ACF07F900507802 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "CPSC411.Backpack-Drive-ManagerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Backpack Drive Manager";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CFE7B4552ACF07F700507802 /* Build configuration list for PBXProject "Backpack Drive Manager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFE7B47C2ACF07F900507802 /* Debug */,
+				CFE7B47D2ACF07F900507802 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFE7B47E2ACF07F900507802 /* Build configuration list for PBXNativeTarget "Backpack Drive Manager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFE7B47F2ACF07F900507802 /* Debug */,
+				CFE7B4802ACF07F900507802 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFE7B4812ACF07F900507802 /* Build configuration list for PBXNativeTarget "Backpack Drive ManagerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFE7B4822ACF07F900507802 /* Debug */,
+				CFE7B4832ACF07F900507802 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFE7B4842ACF07F900507802 /* Build configuration list for PBXNativeTarget "Backpack Drive ManagerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFE7B4852ACF07F900507802 /* Debug */,
+				CFE7B4862ACF07F900507802 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CFE7B4522ACF07F700507802 /* Project object */;
+}
