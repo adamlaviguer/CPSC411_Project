@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CFE7B45E2ACF07F700507802 /* Backpack_Drive_ManagerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE7B45D2ACF07F700507802 /* Backpack_Drive_ManagerApp.swift */; };
+		0A8B09132AFC84EE008A924B /* EditableBackpackListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8B09122AFC84EE008A924B /* EditableBackpackListApp.swift */; };
+		0A8B09152AFC855A008A924B /* BackPackViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8B09142AFC855A008A924B /* BackPackViews.swift */; };
+		0A8B09172AFC8615008A924B /* Backpack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8B09162AFC8615008A924B /* Backpack.swift */; };
+		0A8B09192AFC86CA008A924B /* Modifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8B09182AFC86CA008A924B /* Modifier.swift */; };
 		CFE7B4602ACF07F700507802 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE7B45F2ACF07F700507802 /* ContentView.swift */; };
 		CFE7B4622ACF07F900507802 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFE7B4612ACF07F900507802 /* Assets.xcassets */; };
 		CFE7B4652ACF07F900507802 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFE7B4642ACF07F900507802 /* Preview Assets.xcassets */; };
@@ -34,8 +37,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A8B09122AFC84EE008A924B /* EditableBackpackListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableBackpackListApp.swift; sourceTree = "<group>"; };
+		0A8B09142AFC855A008A924B /* BackPackViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackPackViews.swift; sourceTree = "<group>"; };
+		0A8B09162AFC8615008A924B /* Backpack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backpack.swift; sourceTree = "<group>"; };
+		0A8B09182AFC86CA008A924B /* Modifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifier.swift; sourceTree = "<group>"; };
 		CFE7B45A2ACF07F700507802 /* Backpack Drive Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Backpack Drive Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CFE7B45D2ACF07F700507802 /* Backpack_Drive_ManagerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backpack_Drive_ManagerApp.swift; sourceTree = "<group>"; };
 		CFE7B45F2ACF07F700507802 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CFE7B4612ACF07F900507802 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFE7B4642ACF07F900507802 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -94,8 +100,11 @@
 		CFE7B45C2ACF07F700507802 /* Backpack Drive Manager */ = {
 			isa = PBXGroup;
 			children = (
-				CFE7B45D2ACF07F700507802 /* Backpack_Drive_ManagerApp.swift */,
+				0A8B09122AFC84EE008A924B /* EditableBackpackListApp.swift */,
 				CFE7B45F2ACF07F700507802 /* ContentView.swift */,
+				0A8B09182AFC86CA008A924B /* Modifier.swift */,
+				0A8B09142AFC855A008A924B /* BackPackViews.swift */,
+				0A8B09162AFC8615008A924B /* Backpack.swift */,
 				CFE7B4612ACF07F900507802 /* Assets.xcassets */,
 				CFE7B4632ACF07F900507802 /* Preview Content */,
 			);
@@ -257,8 +266,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A8B09152AFC855A008A924B /* BackPackViews.swift in Sources */,
+				0A8B09172AFC8615008A924B /* Backpack.swift in Sources */,
+				0A8B09192AFC86CA008A924B /* Modifier.swift in Sources */,
 				CFE7B4602ACF07F700507802 /* ContentView.swift in Sources */,
-				CFE7B45E2ACF07F700507802 /* Backpack_Drive_ManagerApp.swift in Sources */,
+				0A8B09132AFC84EE008A924B /* EditableBackpackListApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
