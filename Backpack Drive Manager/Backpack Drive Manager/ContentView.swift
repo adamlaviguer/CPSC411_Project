@@ -9,30 +9,24 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var manager = BackpackManager()
+    @StateObject var volunteerManager = VolunteerManager()
+    @StateObject var driveManager = DriveManager()
     var body: some View {
         TabView {
             EditableBackpackList().tabItem {
                 Image(systemName: "backpack")
-                Text("Backpack")
+                Text("Backpacks")
             }
-            BackpackInfo().tabItem {
+            DriveView().tabItem {
                 Image(systemName:"info")
-                Text("Backpack Info")
+                Text("Drives")
             }
-            AddBackpack().tabItem{
-                Image(systemName: "plus")
-                Text("Add Backpack")
-            }
-            AddBackpack().tabItem{
-                Image(systemName: "plus")
-                Text("Add Item")
-            }
-            AddBackpack().tabItem{
-                Image(systemName: "plus")
-                Text("Add Volunteer")
+            PeopleView().tabItem{
+                Image(systemName: "person")
+                Text("Volunteers")
             }
         }
-        .environmentObject(manager)
+        .environmentObject(manager).environmentObject(volunteerManager).environmentObject(driveManager)
     }
 }
 
