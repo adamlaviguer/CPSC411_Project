@@ -11,10 +11,9 @@ class BackpackManager: ObservableObject {
     
     init() {
         // Add initial crosswalks for testing
-        crosswalks.append(Backpack(name: "Titan hall", description: "800 N State College Blvd., Fullerton CA 92831"))
-        crosswalks.append(Backpack(name: "Titan gym", description: "Gymnasium Campus Dr. Fullerton, CA 92831"))
-        crosswalks.append(Backpack(name: "ECS building", description: "Campus Dr. Fullerton, CA 92831"))
-        crosswalks.append(Backpack(name: "McCarthy Hall", description: "Campus Dr. Fullerton, CA 92831"))
+        crosswalks.append(Backpack(name: "Back To School Backpack", description: "20 available"))
+        crosswalks.append(Backpack(name: "Toy Backpack", description: "15 Available"))
+        crosswalks.append(Backpack(name: "Computer Backpack", description: "10 Available"))
         // TODO: Model 1 - Add another crosswalk object
     }
 }

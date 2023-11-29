@@ -12,11 +12,9 @@ class VolunteerManager: ObservableObject {
     
     init() {
         // Add initial crosswalks for testing
-        volunteers.append(Volunteer(name: "V hall", age: "800 N State College Blvd., Fullerton CA 92831"))
-        volunteers.append(Volunteer(name: "V gym", age: "Gymnasium Campus Dr. Fullerton, CA 92831"))
-        volunteers.append(Volunteer(name: "ECS building", age: "Campus Dr. Fullerton, CA 92831"))
-        volunteers.append(Volunteer(name: "McCarthy Hall", age: "Campus Dr. Fullerton, CA 92831"))
-        // TODO: Model 1 - Add another crosswalk object
+        volunteers.append(Volunteer(name: "Eulices", age: "37"))
+        volunteers.append(Volunteer(name: "Adam", age: "19"))
+        volunteers.append(Volunteer(name: "Kingston", age: "20"))
     }
 }
 

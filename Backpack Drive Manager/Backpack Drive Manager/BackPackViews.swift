@@ -2,11 +2,23 @@ import SwiftUI
 
 struct EditableBackpackList: View {
     @EnvironmentObject var manager: BackpackManager
+    @State private var isAddDriveSheetPresented = false
+    @State private var isDriveAdded = false
+    
     var body: some View {
         
         VStack {
-            // TODO: Model 3 - Add the EditButton here
-            EditButton()
+            HStack{
+                Button("Add Backpack") {
+                                    isAddDriveSheetPresented.toggle()
+                                }
+                                .modifier(ButtonDesign())
+                                .buttonStyle(.bordered)
+                                .sheet(isPresented: $isAddDriveSheetPresented) {
+                                    AddDrive(isDriveAdded: $isDriveAdded, isAddDriveSheetPresented: $isAddDriveSheetPresented) // Pass the binding
+                                }
+                EditButton().buttonStyle(.bordered)
+            }
             List {
                 /// ForEach requires each element in the collection it traverses to be Identifiable
                 ForEach(manager.crosswalks) {

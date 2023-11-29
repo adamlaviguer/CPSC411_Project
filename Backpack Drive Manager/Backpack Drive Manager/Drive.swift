@@ -14,9 +14,6 @@ class DriveManager: ObservableObject {
         // Add initial crosswalks for testing
         drives.append(Drive(name: "D hall", location: "800 N State College Blvd., Fullerton CA 92831"))
         drives.append(Drive(name: "D gym", location: "Gymnasium Campus Dr. Fullerton, CA 92831"))
-        drives.append(Drive(name: "ECS building", location: "Campus Dr. Fullerton, CA 92831"))
-        drives.append(Drive(name: "McCarthy Hall", location: "Campus Dr. Fullerton, CA 92831"))
-        // TODO: Model 1 - Add another crosswalk object
     }
 }
 
