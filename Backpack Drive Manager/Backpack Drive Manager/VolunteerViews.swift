@@ -1,40 +1,55 @@
 import SwiftUI
 
-struct EditableBackpackList: View {
-    @EnvironmentObject var manager: BackpackManager
-    @State private var isAddBackupSheetPresented = false
-    @State private var isBackpackAdded = false
+struct PeopleView: View {
+    @EnvironmentObject var manager: VolunteerManager
     
+    @State private var isAddDriveSheetPresented = false
+    @State private var isDriveAdded = false
     var body: some View {
         
         VStack {
+            // TODO: Model 3 - Add the EditButton here
             HStack{
-                Button("Add Backpack") {
-                                    isAddBackupSheetPresented.toggle()
-                                }
-                                .modifier(ButtonDesign())
-                                .buttonStyle(.bordered)
-                                .sheet(isPresented: $isAddBackupSheetPresented) {
-                                    AddBackpack(isBackpackAdded: $isBackpackAdded, isAddDriveSheetPresented: $isAddBackupSheetPresented) // Pass the binding
-                                }
-                EditButton().buttonStyle(.bordered)
+                Button("Add Volunteer") {
+                    isAddDriveSheetPresented.toggle()
+                }
+                .modifier(ButtonDesign())
+                .buttonStyle(.bordered)
+                .sheet(isPresented: $isAddDriveSheetPresented) {
+                    AddDrive(isDriveAdded: $isDriveAdded, isAddDriveSheetPresented: $isAddDriveSheetPresented) // Pass the binding
+                }
+                EditButton()
             }
+            
+            if isDriveAdded {
+                            Text("Drive added successfully!") // Display a success message
+                                .foregroundColor(.green)
+                                .padding()
+                                .background(Color.white)
+                                .cornerRadius(8)
+                                .animation(Animation.default.delay(2.0))
+                                .onAppear {
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                                        isDriveAdded = false // Reset the flag after 2 seconds
+                                    }
+                                }
+                        }
             List {
                 /// ForEach requires each element in the collection it traverses to be Identifiable
-                ForEach(manager.backpacks) {
-                    crosswalk in
+                ForEach(manager.volunteers) {
+                    volunteer in
                     VStack (alignment: .leading) {
-                        Text(crosswalk.name)
+                        Text(volunteer.name)
                             .font(.largeTitle)
-                        Text(crosswalk.description)
+                        Text(volunteer.age)
                             .font(.caption)
                     }
                 }.onDelete {
                     offset in
-                    manager.backpacks.remove(atOffsets: offset)
+                    manager.volunteers.remove(atOffsets: offset)
                 } .onMove {
                     offset, index in
-                    manager.backpacks.move(fromOffsets: offset,
+                    manager.volunteers.move(fromOffsets: offset,
                                             toOffset: index)
                 }
             }
@@ -42,39 +57,39 @@ struct EditableBackpackList: View {
     }
 }
 
-struct AddBackpack: View {
+struct AddVolunteer: View {
     @SceneStorage("crosswalkName") var crosswalkName: String = ""
     @SceneStorage("crosswalkAddress") var crosswalkAddress: String = ""
-    @EnvironmentObject var manager: BackpackManager
+    @EnvironmentObject var manager: VolunteerManager
     
     // Add a binding to track whether a new drive has been added
-    @Binding var isBackpackAdded: Bool
+    @Binding var isDriveAdded: Bool
     @Binding var isAddDriveSheetPresented: Bool
 
     var body: some View {
         NavigationView {
             VStack {
                 HStack {
-                    Text("Backpack Submission")
+                    Text("Drive Submission")
                         .bold()
                         .font(.largeTitle)
                 }
                 .padding(.bottom, 30)
     
                 HStack {
-                    Text("Packpag Name")
+                    Text("Drive Name")
                         .bold()
                     Spacer()
                 }
                 .padding(.bottom, 5)
                 HStack {
-                    TextField("Backup name", text: $crosswalkName)
+                    TextField("Drive name", text: $crosswalkName)
                         .modifier(TextEntry())
                     Spacer()
                 }
                 .padding(.bottom, 20)
                 HStack {
-                    Text("Backpack address")
+                    Text("Drive address")
                         .bold()
                     Spacer()
                 }
@@ -83,12 +98,12 @@ struct AddBackpack: View {
                     .modifier(TextEntry())
                     .padding(.bottom, 30)
                 Button(action: {
-                    manager.backpacks.append(Backpack(name: crosswalkName, description: crosswalkAddress))
+                    manager.volunteers.append(Volunteer(name: crosswalkName, age: crosswalkAddress))
                     crosswalkName = ""
                     crosswalkAddress = ""
                     
                     // Set isDriveAdded to true to indicate a new drive has been added
-                    isBackpackAdded = true
+                    isDriveAdded = true
                     isAddDriveSheetPresented = false
                 }) {
                     Text("Submit")
@@ -99,7 +114,7 @@ struct AddBackpack: View {
             .padding()
             .onDisappear {
                 // Automatically close the sheet when the view disappears
-                isBackpackAdded = false
+                isDriveAdded = false
             }
         }
     }

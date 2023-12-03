@@ -7,13 +7,13 @@
 import Foundation
 
 class BackpackManager: ObservableObject {
-    @Published var crosswalks: [Backpack] = []
+    @Published var backpacks: [Backpack] = []
     
     init() {
         // Add initial crosswalks for testing
-        crosswalks.append(Backpack(name: "Back To School Backpack", description: "20 available"))
-        crosswalks.append(Backpack(name: "Toy Backpack", description: "15 Available"))
-        crosswalks.append(Backpack(name: "Computer Backpack", description: "10 Available"))
+        backpacks.append(Backpack(name: "Back To School Backpack", description: "20 available"))
+        backpacks.append(Backpack(name: "Toy Backpack", description: "15 Available"))
+        backpacks.append(Backpack(name: "Computer Backpack", description: "10 Available"))
         // TODO: Model 1 - Add another crosswalk object
     }
 }
