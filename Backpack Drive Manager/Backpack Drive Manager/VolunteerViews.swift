@@ -8,7 +8,6 @@ struct PeopleView: View {
     var body: some View {
         
         VStack {
-            // TODO: Model 3 - Add the EditButton here
             HStack{
                 Button("Add Volunteer") {
                     isAddDriveSheetPresented.toggle()
@@ -58,8 +57,8 @@ struct PeopleView: View {
 }
 
 struct AddVolunteer: View {
-    @SceneStorage("crosswalkName") var crosswalkName: String = ""
-    @SceneStorage("crosswalkAddress") var crosswalkAddress: String = ""
+    @SceneStorage("volunteerName") var volunteerName: String = ""
+    @SceneStorage("volunteerAge") var volunteerAge: String = ""
     @EnvironmentObject var manager: VolunteerManager
     
     // Add a binding to track whether a new drive has been added
@@ -83,7 +82,7 @@ struct AddVolunteer: View {
                 }
                 .padding(.bottom, 5)
                 HStack {
-                    TextField("Drive name", text: $crosswalkName)
+                    TextField("Drive name", text: $volunteerName)
                         .modifier(TextEntry())
                     Spacer()
                 }
@@ -94,13 +93,13 @@ struct AddVolunteer: View {
                     Spacer()
                 }
                 .padding(.bottom, 5)
-                TextEditor(text: $crosswalkAddress)
+                TextEditor(text: $volunteerAge)
                     .modifier(TextEntry())
                     .padding(.bottom, 30)
                 Button(action: {
-                    manager.volunteers.append(Volunteer(name: crosswalkName, age: crosswalkAddress))
-                    crosswalkName = ""
-                    crosswalkAddress = ""
+                    manager.volunteers.append(Volunteer(name: volunteerName, age: volunteerAge))
+                    volunteerName = ""
+                    volunteerAge = ""
                     
                     // Set isDriveAdded to true to indicate a new drive has been added
                     isDriveAdded = true

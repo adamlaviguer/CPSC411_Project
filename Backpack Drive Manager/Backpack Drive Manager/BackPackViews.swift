@@ -22,11 +22,11 @@ struct EditableBackpackList: View {
             List {
                 /// ForEach requires each element in the collection it traverses to be Identifiable
                 ForEach(manager.backpacks) {
-                    crosswalk in
+                    backpack in
                     VStack (alignment: .leading) {
-                        Text(crosswalk.name)
+                        Text(backpack.name)
                             .font(.largeTitle)
-                        Text(crosswalk.description)
+                        Text(backpack.description)
                             .font(.caption)
                     }
                 }.onDelete {
@@ -43,8 +43,8 @@ struct EditableBackpackList: View {
 }
 
 struct AddBackpack: View {
-    @SceneStorage("crosswalkName") var crosswalkName: String = ""
-    @SceneStorage("crosswalkAddress") var crosswalkAddress: String = ""
+    @SceneStorage("backpackName") var backpackName: String = ""
+    @SceneStorage("backpackDescription") var backpackDescription: String = ""
     @EnvironmentObject var manager: BackpackManager
     
     // Add a binding to track whether a new drive has been added
@@ -68,7 +68,7 @@ struct AddBackpack: View {
                 }
                 .padding(.bottom, 5)
                 HStack {
-                    TextField("Backup name", text: $crosswalkName)
+                    TextField("Backup name", text: $backpackName)
                         .modifier(TextEntry())
                     Spacer()
                 }
@@ -79,13 +79,13 @@ struct AddBackpack: View {
                     Spacer()
                 }
                 .padding(.bottom, 5)
-                TextEditor(text: $crosswalkAddress)
+                TextEditor(text: $backpackDescription)
                     .modifier(TextEntry())
                     .padding(.bottom, 30)
                 Button(action: {
-                    manager.backpacks.append(Backpack(name: crosswalkName, description: crosswalkAddress))
-                    crosswalkName = ""
-                    crosswalkAddress = ""
+                    manager.backpacks.append(Backpack(name: backpackName, description: backpackDescription))
+                    backpackName = ""
+                    backpackDescription = ""
                     
                     // Set isDriveAdded to true to indicate a new drive has been added
                     isBackpackAdded = true

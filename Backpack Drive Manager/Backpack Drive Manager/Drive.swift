@@ -11,7 +11,7 @@ class DriveManager: ObservableObject {
     @Published var drives: [Drive] = []
     
     init() {
-        // Add initial crosswalks for testing
+        // Add initial drive for testing
         drives.append(Drive(name: "D hall", location: "800 N State College Blvd., Fullerton CA 92831"))
         drives.append(Drive(name: "D gym", location: "Gymnasium Campus Dr. Fullerton, CA 92831"))
     }

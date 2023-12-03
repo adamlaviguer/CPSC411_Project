@@ -11,7 +11,7 @@ class VolunteerManager: ObservableObject {
     @Published var volunteers: [Volunteer] = []
     
     init() {
-        // Add initial crosswalks for testing
+        // Add initial Volunteers for testing
         volunteers.append(Volunteer(name: "Eulices", age: "37"))
         volunteers.append(Volunteer(name: "Adam", age: "19"))
         volunteers.append(Volunteer(name: "Kingston", age: "20"))

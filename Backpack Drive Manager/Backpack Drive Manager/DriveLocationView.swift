@@ -7,7 +7,6 @@ struct DriveView: View {
     var body: some View {
         
         VStack {
-            // TODO: Model 3 - Add the EditButton here
             HStack{
                 Button("Add Drive") {
                                     isAddDriveSheetPresented.toggle()
@@ -58,8 +57,8 @@ struct DriveView: View {
 
 
 struct AddDrive: View {
-    @SceneStorage("crosswalkName") var crosswalkName: String = ""
-    @SceneStorage("crosswalkAddress") var crosswalkAddress: String = ""
+    @SceneStorage("driveName") var driveName: String = ""
+    @SceneStorage("driveAddress") var driveAddress: String = ""
     @EnvironmentObject var manager: DriveManager
     
     // Add a binding to track whether a new drive has been added
@@ -83,7 +82,7 @@ struct AddDrive: View {
                 }
                 .padding(.bottom, 5)
                 HStack {
-                    TextField("Drive name", text: $crosswalkName)
+                    TextField("Drive name", text: $driveName)
                         .modifier(TextEntry())
                     Spacer()
                 }
@@ -94,13 +93,13 @@ struct AddDrive: View {
                     Spacer()
                 }
                 .padding(.bottom, 5)
-                TextEditor(text: $crosswalkAddress)
+                TextEditor(text: $driveAddress)
                     .modifier(TextEntry())
                     .padding(.bottom, 30)
                 Button(action: {
-                    manager.drives.append(Drive(name: crosswalkName, location: crosswalkAddress))
-                    crosswalkName = ""
-                    crosswalkAddress = ""
+                    manager.drives.append(Drive(name: driveName, location: driveAddress))
+                    driveName = ""
+                    driveAddress = ""
                     
                     // Set isDriveAdded to true to indicate a new drive has been added
                     isDriveAdded = true
