@@ -47,7 +47,7 @@ struct AddBackpack: View {
     @SceneStorage("backpackDescription") var backpackDescription: String = ""
     @EnvironmentObject var manager: BackpackManager
     
-    // Add a binding to track whether a new drive has been added
+    // Add a binding to track whether a new backpack has been added
     @Binding var isBackpackAdded: Bool
     @Binding var isAddDriveSheetPresented: Bool
 
@@ -62,7 +62,7 @@ struct AddBackpack: View {
                 .padding(.bottom, 30)
     
                 HStack {
-                    Text("Packpag Name")
+                    Text("Backpack Name")
                         .bold()
                     Spacer()
                 }
@@ -74,7 +74,7 @@ struct AddBackpack: View {
                 }
                 .padding(.bottom, 20)
                 HStack {
-                    Text("Backpack address")
+                    Text("Backpack Description")
                         .bold()
                     Spacer()
                 }
@@ -87,7 +87,7 @@ struct AddBackpack: View {
                     backpackName = ""
                     backpackDescription = ""
                     
-                    // Set isDriveAdded to true to indicate a new drive has been added
+                    // Set isBackpackAddes to true to indicate a new backpack has been added
                     isBackpackAdded = true
                     isAddDriveSheetPresented = false
                 }) {
