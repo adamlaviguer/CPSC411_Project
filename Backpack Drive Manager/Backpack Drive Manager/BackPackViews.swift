@@ -21,11 +21,14 @@ struct EditableBackpackList: View {
             }
             List {
                 /// ForEach requires each element in the collection it traverses to be Identifiable
-                ForEach(manager.backpacks) {
+       //         ForEach(manager.backpacks) {
+        //            backpack in
+                ForEach(manager.backpacks.sorted(by: { $0.available > $1.available })) {
                     backpack in
                     VStack (alignment: .leading) {
                         Text(backpack.name)
                             .font(.largeTitle)
+                        Text(String(backpack.available)+" available")
                         Text(backpack.description)
                             .font(.caption)
                     }
@@ -43,8 +46,9 @@ struct EditableBackpackList: View {
 }
 
 struct AddBackpack: View {
-    @SceneStorage("backpackName") var backpackName: String = ""
-    @SceneStorage("backpackDescription") var backpackDescription: String = ""
+    @State private var backpackName: String = ""
+    @State private var backpackDescription: String = ""
+    @State private var backpackAvail: Int = 0 // Use String for TextField
     @EnvironmentObject var manager: BackpackManager
     
     // Add a binding to track whether a new backpack has been added
@@ -53,54 +57,85 @@ struct AddBackpack: View {
 
     var body: some View {
         NavigationView {
-            VStack {
-                HStack {
-                    Text("Backpack Submission")
-                        .bold()
-                        .font(.largeTitle)
-                }
-                .padding(.bottom, 30)
-    
-                HStack {
-                    Text("Backpack Name")
-                        .bold()
-                    Spacer()
-                }
-                .padding(.bottom, 5)
-                HStack {
-                    TextField("Backup name", text: $backpackName)
-                        .modifier(TextEntry())
-                    Spacer()
-                }
-                .padding(.bottom, 20)
-                HStack {
-                    Text("Backpack Description")
-                        .bold()
-                    Spacer()
-                }
-                .padding(.bottom, 5)
-                TextEditor(text: $backpackDescription)
-                    .modifier(TextEntry())
+            ScrollView {
+                VStack {
+                    HStack {
+                        Text("Backpack Submission")
+                            .bold()
+                            .font(.largeTitle)
+                    }
                     .padding(.bottom, 30)
-                Button(action: {
-                    manager.backpacks.append(Backpack(name: backpackName, description: backpackDescription))
-                    backpackName = ""
-                    backpackDescription = ""
+        
+                    HStack {
+                        Text("Backpack Name")
+                            .bold()
+                        Spacer()
+                    }
+                    .padding(.bottom, 5)
+                    HStack {
+                        TextField("Backup name", text: $backpackName)
+                            .modifier(TextEntry())
+                        Spacer()
+                    }
+                    .padding(.bottom, 20)
                     
-                    // Set isBackpackAddes to true to indicate a new backpack has been added
-                    isBackpackAdded = true
-                    isAddDriveSheetPresented = false
-                }) {
-                    Text("Submit")
-                        .modifier(ButtonDesign())
+                    HStack {
+                        Text("Backpack Availability")
+                            .bold()
+                        Spacer()
+                    }
+                    .padding(.bottom, 5)
+                    HStack {
+                        TextField("How many backpacks are available?", text: Binding(
+                            get: { String(backpackAvail) },
+                            set: { backpackAvail = Int($0) ?? 0 }
+                        ))
+                        .keyboardType(.numberPad)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        Spacer()
+                    }
+                    .padding(.bottom, 20)
+                    
+                    HStack {
+                        Text("Backpack Description")
+                            .bold()
+                        Spacer()
+                    }
+                    .padding(.bottom, 5)
+                    
+                    HStack {
+                        TextEditor(text: $backpackDescription)
+                            .modifier(TextEntry())
+                            .frame(minHeight: 100)
+                        Spacer()
+                    }
+                    .padding(.bottom, 20)
+                    
+                    HStack {
+                        Button(action: {
+                            manager.backpacks.append(Backpack(name: backpackName,
+                                    description: backpackDescription, available: backpackAvail))
+                            backpackName = ""
+                            backpackDescription = ""
+                            
+                            // Set isBackpackAdded to true to indicate a new backpack has been added
+                            isBackpackAdded = true
+                            isAddDriveSheetPresented = false
+                        }) {
+                            Text("Submit")
+                                .modifier(ButtonDesign())
+                        }
+                    }
+
                 }
-                Spacer()
             }
             .padding()
+            //.keyboardAdaptive()
             .onDisappear {
                 // Automatically close the sheet when the view disappears
                 isBackpackAdded = false
             }
         }
     }
+
 }

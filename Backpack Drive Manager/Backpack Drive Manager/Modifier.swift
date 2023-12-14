@@ -19,9 +19,9 @@ struct TextEntry: ViewModifier {
 struct ButtonDesign: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .padding()
-            .background(Color.black)
-            .foregroundColor(Color.white)
+            //.padding()
+            //.background(Color.black)
+            .foregroundColor(Color.blue)
             .cornerRadius(10)
     }
 }

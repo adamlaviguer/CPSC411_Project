@@ -11,9 +11,9 @@ class BackpackManager: ObservableObject {
     
     init() {
         // Add initial backpack for testing
-        backpacks.append(Backpack(name: "Back To School Backpack", description: "20 available"))
-        backpacks.append(Backpack(name: "Toy Backpack", description: "15 Available"))
-        backpacks.append(Backpack(name: "Computer Backpack", description: "10 Available"))
+        backpacks.append(Backpack(name: "Back To School Backpack", description: "These are the Back to School Backpacks.", available: 3))
+        backpacks.append(Backpack(name: "Toy Backpack", description: "These backpacks are made to store toys.", available: 5))
+        backpacks.append(Backpack(name: "Computer Backpack", description: "These backpacks are made to carry computers.", available: 10))
     }
 }
 
@@ -23,4 +23,5 @@ struct Backpack: Identifiable {
     var id = UUID()
     var name: String
     var description: String
+    var available: Int
 }
