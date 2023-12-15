@@ -12,9 +12,9 @@ class VolunteerManager: ObservableObject {
     
     init() {
         // Add initial Volunteers for testing
-        volunteers.append(Volunteer(name: "Eulices", age: "37"))
-        volunteers.append(Volunteer(name: "Adam", age: "19"))
-        volunteers.append(Volunteer(name: "Kingston", age: "20"))
+        volunteers.append(Volunteer(name: "Eulices", age: 37, hoursWorked: 76))
+        volunteers.append(Volunteer(name: "Adam", age: 19, hoursWorked: 42))
+        volunteers.append(Volunteer(name: "Kingston", age: 23, hoursWorked: 64))
     }
 }
 
@@ -23,5 +23,6 @@ struct Volunteer: Identifiable {
     /// UUID generates a unique random hexadecimal string
     var id = UUID()
     var name: String
-    var age: String
+    var age: Int
+    var hoursWorked: Int
 }

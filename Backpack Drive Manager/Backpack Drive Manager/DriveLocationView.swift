@@ -34,13 +34,15 @@ struct DriveView: View {
             
             List {
                 /// ForEach requires each element in the collection it traverses to be Identifiable
-                ForEach(manager.drives) {
+                ForEach(manager.drives.sorted(by: { $0.distance < $1.distance })){
+                //ForEach(manager.drives) {
                     drive in
                     VStack (alignment: .leading) {
                         Text(drive.name)
                             .font(.largeTitle)
                         Text(drive.location)
                             .font(.caption)
+                        Text(String(drive.distance)+" mi away")
                     }
                 }.onDelete {
                     offset in
@@ -59,6 +61,8 @@ struct DriveView: View {
 struct AddDrive: View {
     @SceneStorage("driveName") var driveName: String = ""
     @SceneStorage("driveAddress") var driveAddress: String = ""
+    //@SceneStorage("driveDist") var driveDist: Float = 0
+    @State private var driveDist: Float = 0
     @EnvironmentObject var manager: DriveManager
     
     // Add a binding to track whether a new drive has been added
@@ -88,27 +92,47 @@ struct AddDrive: View {
                 }
                 .padding(.bottom, 20)
                 HStack {
+                    Text("Drive Distance (mi)")
+                        .bold()
+                    Spacer()
+                }
+                .padding(.bottom, 5)
+                HStack {
+                    TextField("How many miles away is this Drive?", text: Binding(
+                        get: { String(driveDist) },
+                        set: { driveDist = Float($0) ?? 0 }
+                    ))
+                    .keyboardType(.numberPad)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    Spacer()
+                }
+                .padding(.bottom, 20)
+                HStack {
                     Text("Drive address")
                         .bold()
                     Spacer()
                 }
                 .padding(.bottom, 5)
-                TextEditor(text: $driveAddress)
-                    .modifier(TextEntry())
-                    .padding(.bottom, 30)
-                Button(action: {
-                    manager.drives.append(Drive(name: driveName, location: driveAddress))
-                    driveName = ""
-                    driveAddress = ""
-                    
-                    // Set isDriveAdded to true to indicate a new drive has been added
-                    isDriveAdded = true
-                    isAddDriveSheetPresented = false
-                }) {
-                    Text("Submit")
-                        .modifier(ButtonDesign())
+                HStack{
+                    TextEditor(text: $driveAddress)
+                        .modifier(TextEntry())
+                        .frame(minHeight: 100)
+                }.padding(.bottom, 20)
+                HStack{
+                    Button(action: {
+                        manager.drives.append(Drive(name: driveName, location: driveAddress, distance: driveDist))
+                        driveName = ""
+                        driveAddress = ""
+                        driveDist = 0
+                        
+                        // Set isDriveAdded to true to indicate a new drive has been added
+                        isDriveAdded = true
+                        isAddDriveSheetPresented = false
+                    }) {
+                        Text("Submit")
+                            .modifier(submitDesign())
+                    }
                 }
-                Spacer()
             }
             .padding()
             .onDisappear {

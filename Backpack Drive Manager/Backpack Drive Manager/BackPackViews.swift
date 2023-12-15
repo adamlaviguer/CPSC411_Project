@@ -140,6 +140,7 @@ struct AddBackpack: View {
                                     description: backpackDescription, available: backpackAvail))
                             backpackName = ""
                             backpackDescription = ""
+                            backpackAvail = 0
                             
                             // Set isBackpackAdded to true to indicate a new backpack has been added
                             isBackpackAdded = true

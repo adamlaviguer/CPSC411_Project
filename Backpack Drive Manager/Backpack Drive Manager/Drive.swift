@@ -12,8 +12,8 @@ class DriveManager: ObservableObject {
     
     init() {
         // Add initial drive for testing
-        drives.append(Drive(name: "D hall", location: "800 N State College Blvd., Fullerton CA 92831"))
-        drives.append(Drive(name: "D gym", location: "Gymnasium Campus Dr. Fullerton, CA 92831"))
+        drives.append(Drive(name: "D hall", location: "800 N State College Blvd., Fullerton CA 92831", distance: 3))
+        drives.append(Drive(name: "D gym", location: "Gymnasium Campus Dr. Fullerton, CA 92831", distance: 0.2))
     }
 }
 
@@ -23,4 +23,5 @@ struct Drive: Identifiable {
     var id = UUID()
     var name: String
     var location: String
+    var distance: Float
 }

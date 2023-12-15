@@ -35,13 +35,24 @@ struct PeopleView: View {
                         }
             List {
                 /// ForEach requires each element in the collection it traverses to be Identifiable
-                ForEach(manager.volunteers) {
+                ForEach(manager.volunteers.sorted(by: {$0.hoursWorked > $1.hoursWorked})) {
                     volunteer in
                     VStack (alignment: .leading) {
                         Text(volunteer.name)
                             .font(.largeTitle)
-                        Text(volunteer.age)
+                        Text("Age: "+String(volunteer.age))
                             .font(.caption)
+                        Text("Hours Worked: "+String(volunteer.hoursWorked)+"hrs")
+                        HStack{
+                             Button("+"){
+                                incFunc(for: volunteer, in: manager)
+                            }
+                            .buttonStyle(.bordered)
+                            Button("-"){
+                                decFunc(for: volunteer, in: manager)
+                            }
+                            .buttonStyle(.bordered)
+                        }
                     }
                 }.onDelete {
                     offset in
@@ -56,9 +67,21 @@ struct PeopleView: View {
     }
 }
 
+private func incFunc(for volunteer: Volunteer, in manager: VolunteerManager) {
+    if let index = manager.volunteers.firstIndex(where: { $0.id == volunteer.id }) {
+        manager.volunteers[index].hoursWorked += 1
+    }
+}
+private func decFunc(for volunteer: Volunteer, in manager: VolunteerManager) {
+    if let index = manager.volunteers.firstIndex(where: { $0.id == volunteer.id }) {
+        manager.volunteers[index].hoursWorked -= 1
+    }
+}
+
 struct AddVolunteer: View {
     @SceneStorage("volunteerName") var volunteerName: String = ""
-    @SceneStorage("volunteerAge") var volunteerAge: String = ""
+    @SceneStorage("volunteerAge") var volunteerAge: Int = 0
+    @SceneStorage("volunteerHours") var volunteerHours: Int = 0
     @EnvironmentObject var manager: VolunteerManager
     
     // Add a binding to track whether a Volunteer has been added
@@ -93,22 +116,48 @@ struct AddVolunteer: View {
                     Spacer()
                 }
                 .padding(.bottom, 5)
-                TextEditor(text: $volunteerAge)
-                    .modifier(TextEntry())
-                    .padding(.bottom, 30)
-                Button(action: {
-                    manager.volunteers.append(Volunteer(name: volunteerName, age: volunteerAge))
-                    volunteerName = ""
-                    volunteerAge = ""
-                    
-                    // Set isVolunteerAdded to true to indicate a new Volunteer has been added
-                    isVolunteerAdded = true
-                    isAddVolunteerSheetPresented = false
-                }) {
-                    Text("Submit")
-                        .modifier(ButtonDesign())
+                HStack {
+                    TextField("How old is this Volunteer?", text: Binding(
+                        get: { String(volunteerAge) },
+                        set: { volunteerAge = Int($0) ?? 0 }
+                    ))
+                    .keyboardType(.numberPad)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    Spacer()
                 }
-                Spacer()
+                .padding(.bottom, 20)
+                HStack {
+                    Text("Volunteer Hours Worked")
+                        .bold()
+                    Spacer()
+                }
+                .padding(.bottom, 5)
+                HStack {
+                    TextField("How many hours did this Volunteer work?", text: Binding(
+                        get: { String(volunteerHours) },
+                        set: { volunteerHours = Int($0) ?? 0 }
+                    ))
+                    .keyboardType(.numberPad)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    Spacer()
+                }
+                .padding(.bottom, 20)
+                HStack{
+                    Button(action: {
+                        manager.volunteers.append(Volunteer(name: volunteerName, age: volunteerAge, hoursWorked: volunteerHours))
+                        volunteerName = ""
+                        volunteerAge = 0
+                        volunteerHours = 0
+                        
+                        // Set isVolunteerAdded to true to indicate a new Volunteer has been added
+                        isVolunteerAdded = true
+                        isAddVolunteerSheetPresented = false
+                    }) {
+                        Text("Submit")
+                            .modifier(submitDesign())
+                    }
+                    Spacer()
+                }
             }
             .padding()
             .onDisappear {
