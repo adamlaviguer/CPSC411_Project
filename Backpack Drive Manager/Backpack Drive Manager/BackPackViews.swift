@@ -23,7 +23,7 @@ struct EditableBackpackList: View {
                 /// ForEach requires each element in the collection it traverses to be Identifiable
        //         ForEach(manager.backpacks) {
         //            backpack in
-                ForEach(manager.backpacks.sorted(by: { $0.available > $1.available })) {
+                ForEach(manager.backpacks.sorted(by: { $0.available > $1.available })){
                     backpack in
                     VStack (alignment: .leading) {
                         Text(backpack.name)
@@ -31,6 +31,19 @@ struct EditableBackpackList: View {
                         Text(String(backpack.available)+" available")
                         Text(backpack.description)
                             .font(.caption)
+                        HStack{
+                             Button("+"){
+                                //incFunc(for: backpack)
+                                incFunc(for: backpack, in: manager)
+                            }
+                            .buttonStyle(.bordered)
+                            Button("-"){
+                                //incFunc(for: backpack)
+                                decFunc(for: backpack, in: manager)
+                            }
+                            .buttonStyle(.bordered)
+                        }
+
                     }
                 }.onDelete {
                     offset in
@@ -43,8 +56,18 @@ struct EditableBackpackList: View {
             }
         }
     }
-}
 
+}
+private func incFunc(for backpack: Backpack, in manager: BackpackManager) {
+    if let index = manager.backpacks.firstIndex(where: { $0.id == backpack.id }) {
+        manager.backpacks[index].available += 1
+    }
+}
+private func decFunc(for backpack: Backpack, in manager: BackpackManager) {
+    if let index = manager.backpacks.firstIndex(where: { $0.id == backpack.id }) {
+        manager.backpacks[index].available -= 1
+    }
+}
 struct AddBackpack: View {
     @State private var backpackName: String = ""
     @State private var backpackDescription: String = ""
@@ -123,7 +146,7 @@ struct AddBackpack: View {
                             isAddDriveSheetPresented = false
                         }) {
                             Text("Submit")
-                                .modifier(ButtonDesign())
+                                .modifier(submitDesign())
                         }
                     }
 

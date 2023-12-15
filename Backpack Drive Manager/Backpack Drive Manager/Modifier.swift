@@ -20,8 +20,18 @@ struct ButtonDesign: ViewModifier {
     func body(content: Content) -> some View {
         content
             //.padding()
-            //.background(Color.black)
-            .foregroundColor(Color.blue)
+            .background(Color.blue)
+            .foregroundColor(Color.white)
             .cornerRadius(10)
     }
 }
+struct submitDesign: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .padding()
+            .background(Color.black)
+            .foregroundColor(Color.white)
+            .cornerRadius(10)
+    }
+}
+
