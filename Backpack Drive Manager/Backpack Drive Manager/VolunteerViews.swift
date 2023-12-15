@@ -156,7 +156,6 @@ struct AddVolunteer: View {
                         Text("Submit")
                             .modifier(submitDesign())
                     }
-                    Spacer()
                 }
             }
             .padding()
